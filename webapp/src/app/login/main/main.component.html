@@ -1,4 +1,4 @@
-<div class="contenedor" *ngIf="loginService.getAuth()=='false' || loginService.getVer()=='ver'">
+<div class="contenedor" *ngIf="loginService.getAuth()=='false'">
     <div>
         <form [formGroup]="formLogin" (submit)="send()" class="login">
             <h1>Iniciar Sesión</h1><br>
@@ -8,7 +8,7 @@
         </form>
     </div>
 </div>
-<div class="contenedor" *ngIf="loginService.getAuth()=='true'  && loginService.getVer()=='ver'">
+<div class="contenedor" *ngIf="loginService.getAuth()=='true'">
     <div class="bienvenida">
         <h1>Bienvenido {{loginService.getNombre()}} </h1>
     </div>

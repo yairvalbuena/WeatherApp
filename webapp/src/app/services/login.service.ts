@@ -33,11 +33,11 @@ export class LoginService {
     return localStorage.getItem('ididentified');
   }
 
-  setVer(value:string){
-    localStorage.setItem('lector',value);
+  setRol(value:string){
+    localStorage.setItem('rol',value);
   }
-  getVer(){
-    return localStorage.getItem('lector');
+  getRol(){
+    return localStorage.getItem('rol');
   }
   
   cerrarSesion(){

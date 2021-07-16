@@ -4,13 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren:()=>import('./main/main.module').then(m=>m.MainModuleLogin)
+    loadChildren:()=>import('./landpage/landpage.module').then(m=>m.LandPageModule)
   }
 ];
-
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class LoginRoutingModule { }
+export class WeatherPageRoutingModule { }

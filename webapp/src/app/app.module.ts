@@ -7,6 +7,8 @@ import { MainModuleLogin } from './login/main/main.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
+import { WeatherPageRoutingModule } from './weather-page/weather-page-routing.module'
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     MainModuleLogin,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    WeatherPageRoutingModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

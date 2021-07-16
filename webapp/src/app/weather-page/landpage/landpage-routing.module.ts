@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LandpageComponent } from './landpage.component';
 
-const routes: Routes = [
-  {
-    path: '',
-    loadChildren:()=>import('./main/main.module').then(m=>m.MainModuleLogin)
-  }
-];
-
+const routes: Routes = [{
+  path: '',
+  component: LandpageComponent
+}];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class LoginRoutingModule { }
+export class LandpageRoutingModule { }

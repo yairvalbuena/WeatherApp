@@ -16,17 +16,16 @@ export class MainComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, public loginService: LoginService) { };
 
   ngOnInit(): void {
-    
+    this.loginService.setAuth('false');
     this.formLogin = this.formBuilder.group({
       user: ['',Validators.required],
       pass: ['',Validators.required]
     });
-    this.loginService.setVer('ver');
     if(this.loginService.getAuth()=='cerrando'){
       this.loginService.setAuth('false');      
     }else if(this.loginService.getAuth()=='true'){
       setInterval(function(){
-        location.href="http://localhost:4200/clima";
+        location.href="http://localhost:4200/weather-page";
       },2000);
     }
   }
@@ -45,12 +44,16 @@ export class MainComponent implements OnInit {
           this.loginService.setNombre(data.listaUsuario[0].name);
           this.loginService.setId(data.listaUsuario[0].id);
           this.loginService.setUser(data.listaUsuario[0].user);
+          if(data.listaUsuario[0].rol==1){
+            this.loginService.setRol("Admin");
+          }
+          else{ this.loginService.setRol("Cliente");}
           fetch(this.endpointIniciar,{
             method: 'POST',
             body: JSON.stringify(this.loginService.getId())
           });
           setInterval(function(){
-            location.href="http://localhost:4200/clima";
+            location.href="http://localhost:4200/weather-page";
           },2000);  
         }
       }).catch(err=>{
