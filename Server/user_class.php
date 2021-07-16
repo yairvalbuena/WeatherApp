@@ -14,8 +14,6 @@ class User
 	private $listarUsuarios;
 	private $listarUsuario;
 	public $pdo;
-	public $entrada;
-	private $salida;
 	public $usuarioId;
 	public $nombre;
 	public $correo;
@@ -56,10 +54,6 @@ class User
 		return $this->listaUsuario;
 	}
 
-	public function funciona(){
-		echo('<h1>Está funcionando la clase</h1>');
-	}
-
 	public function deleteUser($id){
 		$this->id=$id;
 		echo($this->id);
@@ -72,20 +66,6 @@ class User
 		$this->usuario=$usuario;
 		$this->id=$id;
 		$this->sentencia = $this->pdo->prepare("UPDATE user SET name = '$this->nombre',user = '$this->usuario', email = '$this->correo'  WHERE id = '$this->id';");
-		$this->sentencia->execute();
-	}
-
-	public function sesionInicio($id){
-		$this->usuarioId = $id;
-		$this->entrada = date('m-d-Y h:i:s', time());
-		$this->sentencia = $this->pdo->prepare("INSERT INTO `sesionesentrada`(`fecha`, `usuario_id`) VALUES ('$this->entrada','$this->usuarioId');");
-		$this->sentencia->execute();
-	}
-	
-	public function sesionFinal($id){
-		$this->usuarioId = $id;
-		$this->salida = date('m-d-Y h:i:s', time()); 
-		$this->sentencia = $this->pdo->prepare("INSERT INTO `sesionessalida`(`fecha`, `usuario_id`) VALUES ('$this->salida','$this->usuarioId');");
 		$this->sentencia->execute();
 	}
     
