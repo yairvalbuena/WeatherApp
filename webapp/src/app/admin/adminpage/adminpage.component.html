@@ -1,13 +1,13 @@
 <div>
-    <div class="contenedor" *ngIf="looged.getAuth()=='true' && looged.getRol()=='Admin'">
-        <div class="bandeja">
+    <div class="container" *ngIf="looged.getAuth()=='true' && looged.getRol()=='Admin'">
+        <div class="tabla">
             <table *ngIf="mostrarEdit == false">
                 <tr>
-                    <th class="cabezera">Nombre</th>
-                    <th class="cabezera">Usuario</th>
-                    <th class="cabezera">correo</th>
-                    <th class="cabezera">Editar</th>
-                    <th class="cabezera">Eliminar</th>
+                    <th class="header">Nombre</th>
+                    <th class="header">Usuario</th>
+                    <th class="header">correo</th>
+                    <th class="header">Editar</th>
+                    <th class="header">Eliminar</th>
                 </tr>
                 <tr *ngFor="let usuario of data; let i = index">
                     <td>{{ usuario.name }}</td>
@@ -19,10 +19,10 @@
             </table>
             <table *ngIf="mostrarEdit == true">
                 <tr>
-                    <th class="cabezera">Nombre</th>
-                    <th class="cabezera">Usuario</th>
-                    <th class="cabezera">correo</th>
-                    <th class="cabezera">Editar</th>
+                    <th class="header">Nombre</th>
+                    <th class="header">Usuario</th>
+                    <th class="header">correo</th>
+                    <th class="header">Editar</th>
                 </tr>
                 <tr>
                     <td><input class="editar" type="text" value="" [(ngModel)]="nombre"></td>
@@ -33,7 +33,6 @@
             </table>
         </div>
     </div>
-
     <div class="contenedor" *ngIf="looged.getAuth()=='true' && looged.getRol()=='Cliente' ">
         <div class="inicieporfavor">
             <h1>Acceso no autorizado, redireccionando...</h1>
