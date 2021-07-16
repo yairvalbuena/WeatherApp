@@ -62,6 +62,7 @@ class User
 
 	public function deleteUser($id){
 		$this->id=$id;
+		echo($this->id);
 		$this->sentencia = $this->pdo->prepare("DELETE FROM user WHERE id='$id'");
 		$this->sentencia->execute();
 	}
