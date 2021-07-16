@@ -1,9 +1,6 @@
 <p>
     <mat-toolbar color="primary">
         <span>Weather App</span>
-
-
-
         <div class="header">
             <div *ngIf="loggedService.getAuth()=='false'">
                 <ul class="nav">
@@ -19,7 +16,7 @@
             <ul class="nav" *ngIf="loggedService.getAuth()=='true'  && loggedService.getRol()=='Admin'">
                 <li><a mat-raised-button href="/weather-page">Clima</a></li>
                 <li><a mat-raised-button href="/mensajes">Mensajes</a></li>
-                <li><a mat-raised-button href="/administrar">Administrar</a></li>
+                <li><a mat-raised-button href="/admin">Administrador</a></li>
                 <li><a mat-raised-button (click)="cerrarSesion()">Cerrar Sesión</a></li>
             </ul>
         </div>

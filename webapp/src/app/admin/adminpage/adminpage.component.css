@@ -1,0 +1,76 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row;
+    width: 95%;
+    margin: auto;
+}
+
+.tabla {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.mensaje {
+    display: flex;
+    align-items: flex-start;
+    justify-content: first baseline;
+    flex-flow: column;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#1e1cb1", GradientType=1);
+    padding: 10px;
+    width: 350px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+table {
+    border-radius: 50px;
+}
+
+.header {
+    width: 300px;
+    height: 50px;
+}
+
+.btn-header {
+    width: 100px;
+    height: 50px;
+}
+
+.editar {
+    background: none;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+    height: 50px;
+}
+
+td>button {
+    background: none;
+}
+
+.fa-user-edit,
+.fa-check {
+    color: rgb(76, 209, 76);
+}
+
+.fa-trash-alt {
+    color: rgb(209, 76, 76);
+}
+
+.fas {
+    font-size: 30px;
+    cursor: pointer;
+}

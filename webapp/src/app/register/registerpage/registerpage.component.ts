@@ -39,10 +39,10 @@ export class RegisterpageComponent implements OnInit {
 
   ngOnInit(): void {
     this.formLogin = this.formBuilder.group({
-      name: ['', Validators.required],
-      user: ['', Validators.required],
-      email: ['', Validators.required,  Validators.email],
-      pass: ['',  Validators.required]
+      name: [''],
+      user: [''],
+      email: [''],
+      pass: ['']
     });
     
     if(this.loginService.getAuth()=='cerrando'){
@@ -57,7 +57,7 @@ export class RegisterpageComponent implements OnInit {
   send():any{
 
     console.log(this.formLogin.value)
-    if(this.formLogin.valid){
+    if(this.formLogin.valid && this.formLogin.value.user != '' && this.formLogin.value.pass != ''){
       fetch(this.endpoint,{
         method: 'POST',
         body: JSON.stringify(this.formLogin.value)
