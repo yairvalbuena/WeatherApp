@@ -1,1 +1,15 @@
-<p>main works!</p>
+<div class="contenedor" *ngIf="loginService.getAuth()=='false' || loginService.getVer()=='ver'">
+    <div>
+        <form [formGroup]="formLogin" (submit)="send()" class="login">
+            <h1>Iniciar Sesión</h1><br>
+            <input type="text" placeholder="Usuario" id="user" formControlName="user"><br><br>
+            <input type="password" placeholder="Contraseña" id="pass" formControlName="pass"><br><br>
+            <button type="submit">Inicia Sesión</button>
+        </form>
+    </div>
+</div>
+<div class="contenedor" *ngIf="loginService.getAuth()=='true'  && loginService.getVer()=='ver'">
+    <div class="bienvenida">
+        <h1>Bienvenido {{loginService.getNombre()}} </h1>
+    </div>
+</div>
