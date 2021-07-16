@@ -1,19 +1,28 @@
-<div class="header">
-    <div *ngIf="loggedService.getAuth()=='false'">
-        <ul class="nav">
-            <li><a href="/login">Iniciar sesión</a></li>
-            <li><a href="/register">Registrarse</a></li>
-        </ul>
-    </div>
-    <ul class="nav" *ngIf="loggedService.getAuth()=='true' && loggedService.getRol()=='Cliente'">
-        <li><a href="/weather-page">Clima</a></li>
-        <li><a href="/mensajes">Mensajes</a></li>
-        <li><a (click)="cerrarSesion()">Cerrar Sesión</a></li>
-    </ul>
-    <ul class="nav" *ngIf="loggedService.getAuth()=='true'  && loggedService.getRol()=='Admin'">
-        <li><a href="/weather-page">Clima</a></li>
-        <li><a href="/mensajes">Mensajes</a></li>
-        <li><a href="/administrar">Administrar</a></li>
-        <li><a (click)="cerrarSesion()">Cerrar Sesión</a></li>
-    </ul>
-</div>
+<p>
+    <mat-toolbar color="primary">
+        <span>Weather App</span>
+
+
+
+        <div class="header">
+            <div *ngIf="loggedService.getAuth()=='false'">
+                <ul class="nav">
+                    <li><a mat-raised-button href="/login">Iniciar sesión</a></li>
+                    <li><a mat-raised-button href="/register">Registrarse</a></li>
+                </ul>
+            </div>
+            <ul class="nav" *ngIf="loggedService.getAuth()=='true' && loggedService.getRol()=='Cliente'">
+                <li><a mat-raised-button href="/weather-page">Clima</a></li>
+                <li><a mat-raised-button href="/mensajes">Mensajes</a></li>
+                <li><a mat-raised-button (click)="cerrarSesion()">Cerrar Sesión</a></li>
+            </ul>
+            <ul class="nav" *ngIf="loggedService.getAuth()=='true'  && loggedService.getRol()=='Admin'">
+                <li><a mat-raised-button href="/weather-page">Clima</a></li>
+                <li><a mat-raised-button href="/mensajes">Mensajes</a></li>
+                <li><a mat-raised-button href="/administrar">Administrar</a></li>
+                <li><a mat-raised-button (click)="cerrarSesion()">Cerrar Sesión</a></li>
+            </ul>
+        </div>
+
+    </mat-toolbar>
+</p>

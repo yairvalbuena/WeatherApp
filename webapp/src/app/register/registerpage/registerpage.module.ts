@@ -1,20 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MainRoutingModule } from './main-routing.module';
+import { RegisterPageRoutingModule } from './registerpage-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MainComponent } from './main.component';
+import { RegisterpageComponent } from './registerpage.component';
 import { MaterialModule } from 'src/app/material/material.module';
+
+
 
 @NgModule({
   declarations: [
-    MainComponent
+    RegisterpageComponent
   ],
   imports: [
     CommonModule,
-    MainRoutingModule,
+    RegisterPageRoutingModule,
     ReactiveFormsModule,
     MaterialModule
   ]
 })
-export class MainModuleLogin { }
+export class RegisterPageMainModule { }

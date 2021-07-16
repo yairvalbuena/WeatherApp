@@ -1,0 +1,28 @@
+.contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+input {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    height: 10px;
+    background: none;
+    border: 0;
+    border-bottom: solid;
+    outline: none;
+    font-size: 17px;
+}
+
+button {
+    padding: 8px;
+    width: 400px;
+    border-radius: 10px;
+    font-size: 16px;
+}

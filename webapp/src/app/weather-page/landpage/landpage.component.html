@@ -2,52 +2,37 @@
     <div *ngIf="logged.getAuth()=='true'">
         <ul>
             <li class="animacion" (click)="mostrarClimaColombia()">Colombia</li>
-            <li class="animacion" (click)="mostrarClimaArgentina()">Argentina</li>
-            <li class="animacion" (click)="mostrarClimaMexico()">Mexico</li>
-            <li class="animacion" (click)="mostrarClimaChile()">Chile</li>
-            <li class="animacion" (click)="mostrarClimaEstadosUnidos()">Estados Unidos</li>
+            <li class="animacion" (click)="mostrarClimaLondres()">Inglaterra</li>
+            <li class="animacion" (click)="mostrarClimaIndia()">India</li>
+            <li class="animacion" (click)="mostrarClimaJapon()">Japón</li>
+            <li class="animacion" (click)="mostrarClimaEspana()">España</li>
         </ul>
         <div class="tiempos">
-            <!--Primera ciudad-->
             <div>
-                <h1 class="temp">{{ciudadUno.main.temp}}°C</h1>
-                <h3 class="feelslike">Se siente como a: {{ciudadUno.main.feels_like}} °C</h3>
-                <h1 class="ciudad">{{ciudadUno.name}}</h1>
-                <p class="humedad">Humedad: {{ciudadUno.main.humidity}}%</p>
+                <h1 class="temp">{{city1.main.temp}}°C</h1>
+                <h3 class="feelslike">Sensación termica: {{city1.main.feels_like}} °C</h3>
+                <h1 class="ciudad">{{city1.name}}</h1>
             </div>
-            <!--Segunda ciudad-->
             <div>
-                <h1 class="temp">{{ciudadDos.main.temp}}°C</h1>
-                <h3 class="feelslike">Se siente como a: {{ciudadDos.main.feels_like}} °C</h3>
-                <h1 class="ciudad">{{ciudadDos.name}}</h1>
-                <p class="humedad">Humedad: {{ciudadDos.main.humidity}}%</p>
+                <h1 class="temp">{{city2.main.temp}}°C</h1>
+                <h3 class="feelslike">Sensación termica: {{city2.main.feels_like}} °C</h3>
+                <h1 class="ciudad">{{city2.name}}</h1>
             </div>
-            <!--Tercera ciudad-->
             <div>
-                <h1 class="temp">{{ciudadTres.main.temp}}°C</h1>
-                <h3 class="feelslike">Se siente como a: {{ciudadTres.main.feels_like}} °C</h3>
-                <h1 class="ciudad">{{ciudadTres.name}}</h1>
-                <p class="humedad">Humedad: {{ciudadTres.main.humidity}}%</p>
+                <h1 class="temp">{{city3.main.temp}}°C</h1>
+                <h3 class="feelslike">Sensación termica: {{city3.main.feels_like}} °C</h3>
+                <h1 class="ciudad">{{city3.name}}</h1>
             </div>
-            <!--Cuarta ciudad-->
             <div>
-                <h1 class="temp">{{ciudadCuatro.main.temp}}°C</h1>
-                <h3 class="feelslike">Se siente como a: {{ciudadCuatro.main.feels_like}} °C</h3>
-                <h1 class="ciudad">{{ciudadCuatro.name}}</h1>
-                <p class="humedad">Humedad: {{ciudadCuatro.main.humidity}}%</p>
+                <h1 class="temp">{{city4.main.temp}}°C</h1>
+                <h3 class="feelslike">Sensación termica: {{city4.main.feels_like}} °C</h3>
+                <h1 class="ciudad">{{city4.name}}</h1>
             </div>
-            <!--Quinta ciudad-->
             <div>
-                <h1 class="temp">{{ciudadCinco.main.temp}}°C</h1>
-                <h3 class="feelslike">Se siente como a: {{ciudadCinco.main.feels_like}} °C</h3>
-                <h1 class="ciudad">{{ciudadCinco.name}}</h1>
-                <p class="humedad">Humedad: {{ciudadCinco.main.humidity}}%</p>
+                <h1 class="temp">{{city5.main.temp}}°C</h1>
+                <h3 class="feelslike">Sensación termica: {{city5.main.feels_like}} °C</h3>
+                <h1 class="ciudad">{{city5.name}}</h1>
             </div>
-        </div>
-    </div>
-    <div class="contenedor" *ngIf="logged.getAuth()=='cerrando'">
-        <div class="inicieporfavor">
-            <h1>Cerrando Sesión, Vuelva Pronto</h1>
         </div>
     </div>
     <div class="contenedor" *ngIf="logged.getAuth()=='false'">
