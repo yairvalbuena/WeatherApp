@@ -11,7 +11,8 @@ require_once('./dbconnection.php');
 class Mensaje
 {
 	private $sentencia;
-	private $MessagesList;
+	private $listarMensajes;
+	private $listarMensaje;
 	public $pdo;
     
 	
@@ -30,11 +31,12 @@ class Mensaje
 	}
 
 	public function getMensajes(){
-		$this->sentencia = $this->pdo->prepare("SELECT message.message, user.name FROM message INNER JOIN user WHERE message.user_id = user.id");
+		$this->sentencia = $this->pdo->prepare("SELECT message.message, user.name FROM message INNER JOIN user Where message.user_id=user.id");
 		$this->sentencia->execute();
-		$this->MessagesList = $this->sentencia->fetchAll(PDO::FETCH_ASSOC);
-		return $this->MessagesList;
+		$this->MessageList = $this->sentencia->fetchAll(PDO::FETCH_ASSOC);
+		return $this->MessageList;
 	}
+    
 }
 
 

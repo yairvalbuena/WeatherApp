@@ -25,7 +25,6 @@
     align-items: flex-start;
     justify-content: first baseline;
     flex-flow: column;
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#1e1cb1", GradientType=1);
     padding: 10px;
     width: 350px;
     height: 200px;
@@ -55,10 +54,6 @@ table {
 td {
     text-align: center;
     height: 50px;
-}
-
-td>button {
-    background: none;
 }
 
 .fa-user-edit,

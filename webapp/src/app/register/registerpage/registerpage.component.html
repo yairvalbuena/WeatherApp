@@ -1,45 +1,46 @@
 <div class="contenedor" *ngIf="loginService.getAuth()=='false'">
     <div>
-        <form [formGroup]="formLogin" (submit)="send()" class="login">
-            <h1>Registro</h1><br>
-            <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>Nombre</mat-label>
-                <input type="text" matInput [formControl]="nameFormControl" formControlName="name" placeholder="Nombre" id="name">
-                <mat-error *ngIf="nameFormControl.hasError('required')">
-                    Nombre es <strong>Requerido</strong>
-                </mat-error>
-            </mat-form-field><br>
-            <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>Usario</mat-label>
-                <input type="text" matInput [formControl]="userFormControl" formControlName="user" placeholder="Usuario" id="user">
-                <mat-error *ngIf="userFormControl.hasError('required')">
-                    Usario es <strong>Requerido</strong>
-                </mat-error>
-            </mat-form-field><br>
-            <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>Email</mat-label>
-                <input type="email" matInput [formControl]="emailFormControl" formControlName="email" placeholder="Correo" id="email">
-                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-                    Porfavor ingrese un correo...
-                </mat-error>
-                <mat-error *ngIf="emailFormControl.hasError('required')">
-                    Correo es <strong>Requerido</strong>
-                </mat-error>
-            </mat-form-field><br>
-            <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>Password</mat-label>
-                <input type="password" matInput [formControl]="passFormControl" formControlName="pass" placeholder="Password" id="pass">
-                <mat-error *ngIf="passFormControl.hasError('required')">
-                    Password es <strong>Requerido</strong>
-                </mat-error>
-            </mat-form-field><br>
-
-            <!-- <input type="text" placeholder="Nombre Completo" id="name" formControlName="name"><br><br>
-            <input type="text" placeholder="Usuario" id="user" formControlName="user"><br><br>
-            <input type="email" placeholder="Correo" id="email" formControlName="email"><br><br> 
-            <input type="password" placeholder="Contraseña" id="pass" formControlName="pass"><br><br> -->
-            <button mat-raised-button color="primary" type="submit">Registrarse</button>
-        </form>
+        <mat-card>
+            <mat-card-content>
+                <form [formGroup]="formLogin" (submit)="send()" class="login">
+                    <div class="title">
+                        <mat-card-title>Registro</mat-card-title>
+                    </div>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Nombre</mat-label>
+                        <input type="text" matInput [formControl]="nameFormControl" formControlName="name" placeholder="Nombre" id="name">
+                        <mat-error *ngIf="nameFormControl.hasError('required')">
+                            Nombre es <strong>Requerido</strong>
+                        </mat-error>
+                    </mat-form-field><br>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Usario</mat-label>
+                        <input type="text" matInput [formControl]="userFormControl" formControlName="user" placeholder="Usuario" id="user">
+                        <mat-error *ngIf="userFormControl.hasError('required')">
+                            Usario es <strong>Requerido</strong>
+                        </mat-error>
+                    </mat-form-field><br>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Email</mat-label>
+                        <input type="email" matInput [formControl]="emailFormControl" formControlName="email" placeholder="Correo" id="email">
+                        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                            Porfavor ingrese un correo...
+                        </mat-error>
+                        <mat-error *ngIf="emailFormControl.hasError('required')">
+                            Correo es <strong>Requerido</strong>
+                        </mat-error>
+                    </mat-form-field><br>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Password</mat-label>
+                        <input type="password" matInput [formControl]="passFormControl" formControlName="pass" placeholder="Password" id="pass">
+                        <mat-error *ngIf="passFormControl.hasError('required')">
+                            Password es <strong>Requerido</strong>
+                        </mat-error>
+                    </mat-form-field><br>
+                    <button mat-raised-button color="primary" type="submit">Registrarse</button>
+                </form>
+            </mat-card-content>
+        </mat-card>
     </div>
 </div>
 <div class="contenedor" *ngIf="loginService.getAuth()=='true'">
