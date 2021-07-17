@@ -4,8 +4,16 @@
     justify-content: center;
 }
 
-h1 {
-    font-size: 40px;
+.login {
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    text-align: center;
+    padding: 20px 0;
 }
 
 input {
@@ -17,7 +25,6 @@ input {
     border: 0;
     border-bottom: solid;
     outline: none;
-    font-size: 17px;
 }
 
 button {

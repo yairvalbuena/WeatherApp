@@ -1,34 +1,34 @@
 <div>
     <div *ngIf="logged.getAuth()=='true'">
         <ul>
-            <li class="animacion" (click)="mostrarClimaColombia()">Colombia</li>
-            <li class="animacion" (click)="mostrarClimaLondres()">Inglaterra</li>
-            <li class="animacion" (click)="mostrarClimaIndia()">India</li>
-            <li class="animacion" (click)="mostrarClimaJapon()">Japón</li>
-            <li class="animacion" (click)="mostrarClimaEspana()">España</li>
+            <li class="animacion mat-stroked-button" (click)="mostrarClimaColombia()">Colombia</li>
+            <li class="animacion mat-stroked-button" (click)="mostrarClimaLondres()">Inglaterra</li>
+            <li class="animacion mat-stroked-button" (click)="mostrarClimaIndia()">India</li>
+            <li class="animacion mat-stroked-button" (click)="mostrarClimaJapon()">Japón</li>
+            <li class="animacion mat-stroked-button" (click)="mostrarClimaEspana()">España</li>
         </ul>
         <div class="tiempos">
-            <div>
+            <div class="city">
                 <h1 class="temp">{{city1.main.temp}}°C</h1>
                 <h3 class="feelslike">Sensación termica: {{city1.main.feels_like}} °C</h3>
                 <h1 class="ciudad">{{city1.name}}</h1>
             </div>
-            <div>
+            <div class="city">
                 <h1 class="temp">{{city2.main.temp}}°C</h1>
                 <h3 class="feelslike">Sensación termica: {{city2.main.feels_like}} °C</h3>
                 <h1 class="ciudad">{{city2.name}}</h1>
             </div>
-            <div>
+            <div class="city">
                 <h1 class="temp">{{city3.main.temp}}°C</h1>
                 <h3 class="feelslike">Sensación termica: {{city3.main.feels_like}} °C</h3>
                 <h1 class="ciudad">{{city3.name}}</h1>
             </div>
-            <div>
+            <div class="city">
                 <h1 class="temp">{{city4.main.temp}}°C</h1>
                 <h3 class="feelslike">Sensación termica: {{city4.main.feels_like}} °C</h3>
                 <h1 class="ciudad">{{city4.name}}</h1>
             </div>
-            <div>
+            <div class="city">
                 <h1 class="temp">{{city5.main.temp}}°C</h1>
                 <h3 class="feelslike">Sensación termica: {{city5.main.feels_like}} °C</h3>
                 <h1 class="ciudad">{{city5.name}}</h1>

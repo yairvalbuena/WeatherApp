@@ -13,8 +13,8 @@
                     <td>{{ usuario.name }}</td>
                     <td>{{ usuario.user }}</td>
                     <td>{{ usuario.email }}</td>
-                    <td><button (click)="editar(usuario.id, usuario.nombre, usuario.user, usuario.correo)"><i class="fas fa-user-edit"></i></button></td>
-                    <td><button (click)="eliminar(usuario.id)"><i class="fas fa-trash-alt"></i></button></td>
+                    <td><button mat-mini-fab color="primary" (click)="editar(usuario.id, usuario.nombre, usuario.user, usuario.correo)"><mat-icon>edit</mat-icon></button></td>
+                    <td><button mat-mini-fab color="primary" (click)="eliminar(usuario.id)"><mat-icon>delete</mat-icon></button></td>
                 </tr>
             </table>
             <table *ngIf="mostrarEdit == true">
@@ -28,7 +28,7 @@
                     <td><input class="editar" type="text" value="" [(ngModel)]="nombre"></td>
                     <td><input class="editar" type="text" value="" [(ngModel)]="user"></td>
                     <td><input class="editar" type="text" value="" [(ngModel)]="correo"></td>
-                    <td><button (click)="terminarEditar(nombre, user, correo)"><i class="fas fa-check"></i></button></td>
+                    <td><button button mat-mini-fab color="primary" (click)="terminarEditar(nombre, user, correo)"><mat-icon>edit</mat-icon></button></td>
                 </tr>
             </table>
         </div>

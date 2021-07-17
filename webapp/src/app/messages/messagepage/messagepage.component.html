@@ -1,12 +1,12 @@
 <div>
     <div class="contenedor" *ngIf="login.getAuth()=='true'">
-        <div class="bandeja">
+        <div class="container">
             <div class="mensaje" *ngFor="let message of data; let i = index">
                 <h1>De: {{message.name}}</h1><br>
                 <p>{{message.message}}</p>
             </div>
         </div>
-        <ul class="btn-agregar">
+        <ul class="btn-agregar mat-stroked-button">
             <li><a href="/mensajes/enviarMensaje">Agregar Un Mensaje</a></li>
         </ul>
     </div>
