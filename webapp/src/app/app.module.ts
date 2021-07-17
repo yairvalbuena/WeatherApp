@@ -13,6 +13,7 @@ import { RegisterPageMainModule} from './register/registerpage/registerpage.modu
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MaterialModule } from './material/material.module';
 import { AdminMainModule } from './admin/adminpage/adminpage.module';
+import { MessagesMainModule } from './messages/messagepage/messagepage.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AdminMainModule } from './admin/adminpage/adminpage.module';
     RegisterPageMainModule,
     BrowserAnimationsModule,
     MaterialModule,
-    AdminMainModule
+    AdminMainModule,
+    MessagesMainModule
     
   ],
   providers: [],

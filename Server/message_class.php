@@ -12,6 +12,7 @@ class Mensaje
 {
 	private $sentencia;
 	private $MessagesList;
+
 	public $pdo;
     
 	
@@ -30,11 +31,14 @@ class Mensaje
 	}
 
 	public function getMensajes(){
-		$this->sentencia = $this->pdo->prepare("SELECT message.message, user.name FROM message INNER JOIN user WHERE message.user_id = user.id");
+
+		$this->sentencia = $this->pdo->prepare("SELECT * FROM message");
 		$this->sentencia->execute();
 		$this->MessagesList = $this->sentencia->fetchAll(PDO::FETCH_ASSOC);
 		return $this->MessagesList;
 	}
+
+    
 }
 
 

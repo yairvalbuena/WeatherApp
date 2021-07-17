@@ -1,0 +1,18 @@
+<div>
+    <div class="contenedor" *ngIf="login.getAuth()=='true'">
+        <div class="bandeja">
+            <div class="mensaje" *ngFor="let message of data; let i = index">
+                <h1>De: {{message.user_id}}</h1><br>
+                <p>{{message.message}}</p>
+            </div>
+        </div>
+        <ul class="btn-agregar">
+            <li><a href="/mensajes/enviarMensaje">Agregar Un Mensaje</a></li>
+        </ul>
+    </div>
+    <div class="contenedor" *ngIf="login.getAuth()=='false'">
+        <div class="inicieporfavor">
+            <h1>Por favor, inicie sesión</h1>
+        </div>
+    </div>
+</div>
