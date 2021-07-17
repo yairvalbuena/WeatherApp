@@ -1,0 +1,53 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row;
+    width: 95%;
+    margin: auto;
+}
+
+.bandeja {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.mensaje {
+    display: flex;
+    align-items: flex-start;
+    justify-content: first baseline;
+    flex-flow: column;
+    padding: 10px;
+    width: 350px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.mensaje>h1 {
+    font-size: 15px;
+}
+
+.btn-agregar,
+.btn-agregar>li,
+.btn-agregar>li>a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.btn-agregar {
+    width: 200px;
+    height: 70px;
+}

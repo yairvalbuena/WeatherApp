@@ -2,7 +2,7 @@
     <div class="contenedor" *ngIf="login.getAuth()=='true'">
         <div class="bandeja">
             <div class="mensaje" *ngFor="let message of data; let i = index">
-                <h1>De: {{message.user_id}}</h1><br>
+                <h1>De: {{message.name}}</h1><br>
                 <p>{{message.message}}</p>
             </div>
         </div>

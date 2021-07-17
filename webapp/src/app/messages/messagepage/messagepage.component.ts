@@ -27,7 +27,7 @@ export class MessagepageComponent implements OnInit {
         body: JSON.stringify('')
       }).then(res=>res.json()).then(data => {
         console.log(data);
-        this.data = data.MessagesList;
+        this.data = data.MessageList;
         console.log(this.data);
       });
     }else if(this.login.getAuth()=='false'){
