@@ -12,4 +12,8 @@ depending on the country selected.
 
 ## Technical Description:
 -be sure you have xamp installed in your pc
--
+-copy both folder on htdocs on xamp directory
+-import weatherapp sql for database
+-Server made on php
+-Front End Angular
+-Angular material
