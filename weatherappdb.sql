@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-07-2021 a las 01:16:29
+-- Tiempo de generación: 18-07-2021 a las 09:03:42
 -- Versión del servidor: 10.4.20-MariaDB
 -- Versión de PHP: 8.0.8
 
@@ -20,6 +20,25 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `weatherapp`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `message`
+--
+
+CREATE TABLE `message` (
+  `user_id` int(11) NOT NULL,
+  `message` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `message`
+--
+
+INSERT INTO `message` (`user_id`, `message`) VALUES
+(1, 'Hola'),
+(8, 'otro mensaje otro usuario');
 
 -- --------------------------------------------------------
 
@@ -41,7 +60,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `user`, `email`, `password`, `rol`) VALUES
-(1, 'Yair Valbuena', 'yayov', 'yair.valbuena@gmail.com', '1234', 1);
+(1, 'Yair Valbuena', 'yayov', 'yair.valbuena@gmail.com', '1234567', 1),
+(8, 'Johan', 'jh', 'yh@gmail.com', '1234', 0);
 
 --
 -- Índices para tablas volcadas
@@ -61,7 +81,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
